@@ -4,7 +4,7 @@ import Header from "@/components/layout/Header";
 import PropertyCard from "@/components/booking/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, Plus } from "lucide-react";
+import { Search } from "lucide-react";
 import { properties } from "@/data/mockData";
 
 export default function Bookings() {
@@ -37,10 +37,6 @@ export default function Bookings() {
               className="pl-10"
             />
           </div>
-          <Button className="bg-indigo-600 hover:bg-indigo-700 text-white">
-            <Plus className="w-4 h-4 mr-2" />
-            Add Bookings
-          </Button>
         </div>
 
         <div className="space-y-4">
