@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Home, Search, HelpCircle, ArrowLeft } from "lucide-react";
+import { BookOpen, Shield, Home, HelpCircle, ArrowLeft } from "lucide-react";
 
-export default function NotFound() {
+export default function PermissionDenied() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-6">
@@ -22,52 +22,51 @@ export default function NotFound() {
         <Card>
           <CardContent className="pt-6">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-bold text-gray-600">404</span>
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto">
+                <Shield className="h-8 w-8 text-red-600" />
               </div>
 
               <h1 className="text-2xl font-bold text-gray-900">
-                Page Not Found
+                Access Denied
               </h1>
 
               <p className="text-gray-600 leading-relaxed">
-                Sorry, we couldn't find the page you're looking for. The page
-                might have been moved, deleted, or you entered an incorrect URL.
+                You don't have permission to access this page or resource. This
+                might be because:
               </p>
 
               <div className="text-left bg-gray-50 rounded-lg p-4 space-y-2">
                 <div className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-gray-600">
-                    Check the URL for any typos
+                    You're not signed in to your account
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-gray-600">
-                    The page may have been moved or deleted
+                    Your account doesn't have the required permissions
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
                   <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-gray-600">
-                    You might not have permission to view this page
+                    The page is restricted to certain user roles
                   </p>
                 </div>
               </div>
 
               <div className="space-y-3 pt-4">
-                <Link to="/">
+                <Link to="/auth/login">
                   <Button className="w-full bg-indigo-600 hover:bg-indigo-700">
-                    <Home className="w-4 h-4 mr-2" />
-                    Go to Home Page
+                    Sign In to Your Account
                   </Button>
                 </Link>
 
-                <Link to="/bookings">
+                <Link to="/">
                   <Button variant="outline" className="w-full">
-                    <Search className="w-4 h-4 mr-2" />
-                    Browse Properties
+                    <Home className="w-4 h-4 mr-2" />
+                    Go to Home Page
                   </Button>
                 </Link>
 
@@ -83,7 +82,7 @@ export default function NotFound() {
 
               <div className="pt-4 border-t border-gray-200">
                 <p className="text-sm text-gray-500 mb-3">
-                  Need help finding what you're looking for?
+                  Think this is a mistake?
                 </p>
                 <Link to="/contact">
                   <Button
