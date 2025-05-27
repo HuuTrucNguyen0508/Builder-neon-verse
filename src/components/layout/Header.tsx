@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Calendar, BookOpen } from "lucide-react";
 
@@ -42,19 +41,6 @@ export default function Header() {
       </div>
 
       <div className="flex items-center gap-3">
-        <Button
-          variant="outline"
-          size="sm"
-          className="text-gray-600 border-gray-200 hover:bg-gray-50"
-        >
-          Available Slots
-        </Button>
-        <Button
-          size="sm"
-          className="bg-indigo-600 hover:bg-indigo-700 text-white"
-        >
-          Sign in
-        </Button>
         <Avatar className="h-8 w-8">
           <AvatarImage src="/placeholder.svg" alt="User" />
           <AvatarFallback>U</AvatarFallback>

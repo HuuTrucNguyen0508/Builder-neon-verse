@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Property } from "@/types/booking";
 
@@ -48,18 +47,6 @@ export default function PropertyCard({ property }: PropertyCardProps) {
                 >
                   {property.status}
                 </Badge>
-
-                <Button
-                  size="sm"
-                  className={
-                    property.status === "Available"
-                      ? "bg-indigo-600 hover:bg-indigo-700 text-white"
-                      : "bg-gray-300 text-gray-600 cursor-not-allowed"
-                  }
-                  onClick={(e) => e.preventDefault()}
-                >
-                  EDIT
-                </Button>
               </div>
             </div>
           </div>
